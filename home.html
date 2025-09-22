@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central do Amor | Homenagens Emocionantes desde 1992</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --vermelho: #D32F2F;
+            --vermelho-escuro: #B71C1C;
+            --vermelho-claro: #FF5252;
+            --dourado: #FFD700;
+            --branco: #FFFFFF;
+            --cinza-claro: #F5F5F5;
+            --cinza-escuro: #333333;
+            --sombra: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+            color: var(--branco);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--branco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--vermelho);
+            font-weight: bold;
+            font-size: 24px;
+            box-shadow: var(--sombra);
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .contact-header {
+            text-align: right;
+        }
+        
+        .contact-header .phone {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .contact-header .since {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('c708b0ffda89e0fab8a7f60433f959a8.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: var(--branco);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            margin: 10px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--branco);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid var(--branco);
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--branco);
+            color: var(--vermelho);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--branco);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--vermelho);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--dourado);
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--cinza-escuro);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--cinza-claro);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 50px;
+            color: var(--vermelho);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--vermelho-escuro);
+        }
+        
+        /* Videos Section */
+        .videos {
+            padding: 80px 0;
+            background-color: var(--cinza-claro);
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-card {
+            background-color: var(--branco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--vermelho-escuro);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--dourado);
+        }
+        
+        .footer-contact {
+            font-size: 18px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .floating-whatsapp a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: var(--branco);
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-whatsapp a:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .contact-header {
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .btn-whatsapp, .btn-secondary {
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-img">CA</div>
+                    <div class="logo-text">
+                        <h1>Central do Amor</h1>
+                        <p>Homenagens emocionantes</p>
+                    </div>
+                </div>
+                <div class="contact-header">
+                    <div class="phone"><i class="fas fa-phone"></i> (48) 9 8404-2020</div>
+                    <div class="since">Desde 1992</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Surpreenda quem você ama com uma homenagem inesquecível</h1>
+                <p>Há mais de 30 anos criando momentos emocionantes que ficarão para sempre na memória</p>
+                <a href="https://api.whatsapp.com/send/?phone=554884042020&text=Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento%2C%20voc%C3%AA%20pode%20me%20auxiliar%3F" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> FALE CONOSCO NO WHATSAPP
+                </a>
+                <a href="#videos" class="btn-secondary">VER NOSSAS HOMENAGENS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos homenagens personalizadas para todas as ocasiões especiais</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Homenagens Românticas</h3>
+                    <p>Surpreenda seu amor com uma declaração única e emocionante que marcará para sempre a relação de vocês.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Aniversários</h3>
+                    <p>Torne o aniversário de alguém especial ainda mais memorável com uma homenagem surpresa.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Homenagens Familiares</h3>
+                    <p>Demonstre seu amor e gratidão aos familiares com uma homenagem emocionante e personalizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos" id="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossas Homenagens em Ação</h2>
+                <p>Confira alguns momentos especiais que criamos para nossos clientes</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/GaZ3fpIabAM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Homenagem Surpresa de Aniversário</h3>
+                        <p>Momentos de emoção e alegria em uma comemoração especial</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dGFjalSIncM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Declaração de Amor Romântica</h3>
+                        <p>Uma linda surpresa para demonstrar todo o carinho e amor</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/QJDPIFJ3toU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Homenagem Familiar Especial</h3>
+                        <p>Um momento único de carinho entre familiares</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para fazer alguém especial sorrir hoje?</h2>
+            <p>Entre em contato conosco e vamos juntos criar uma homenagem inesquecível</p>
+            <a href="https://api.whatsapp.com/send/?phone=554884042020&text=Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento%2C%20voc%C3%AA%20pode%20me%20auxiliar%3F" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Central do Amor</div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone"></i> (48) 9 8404-2020</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Atendemos toda a região</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Central do Amor - Homenagens emocionantes desde 1992</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="floating-whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=554884042020&text=Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento%2C%20voc%C3%AA%20pode%20me%20auxiliar%3F" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'var(--vermelho-escuro)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro))';
+            }
+        });
+    </script>
+</body>
+</html>
